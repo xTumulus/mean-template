@@ -1,0 +1,11 @@
+<header title="{{title}}" version="{{version}}" [onSettingsClick]="openSettings"></header>
+
+<main class="pt-14 flex flex-col">
+    <div role="tablist" class="tabs tabs-lift">
+        <a role="tab" class="tab tab-active" routerLink="/">Home</a>
+        <a role="tab" class="tab" routerLink="/about">About Us</a>
+        <a role="tab" class="tab" routerLink="/account">User Account</a>
+    </div>
+    <router-outlet />
+</main>
+  

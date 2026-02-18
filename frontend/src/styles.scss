@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+    themes: app-light, app-dark --default, all
+};
+
+// Light Theme
+@plugin "daisyui/theme" {
+  name: "app-light";
+  default: true;
+  color-scheme: light;
+
+  --color-primary: oklch(65% 0.2 210);       /* cyan-500 */
+  --color-primary-content: oklch(98% 0 0);
+  --color-secondary: oklch(58% 0.18 210);    /* cyan-600 */
+  --color-secondary-content: oklch(98% 0 0);
+  --color-accent: oklch(72% 0.19 210);       /* cyan-400 */
+  --color-accent-content: oklch(20% 0.05 210);
+  --color-base-100: oklch(98% 0 0);
+  --color-base-200: oklch(95% 0.005 210);
+  --color-base-300: oklch(90% 0.01 210);
+  --color-base-content: oklch(15% 0.02 210);
+}
+
+// Dark Theme
+@plugin "daisyui/theme" {
+  name: "app-dark";
+  color-scheme: dark;
+
+  --color-primary: oklch(65% 0.2 210);
+  --color-primary-content: oklch(98% 0 0);
+  --color-secondary: oklch(58% 0.18 210);
+  --color-secondary-content: oklch(98% 0 0);
+  --color-accent: oklch(72% 0.19 210);
+  --color-accent-content: oklch(20% 0.05 210);
+  --color-base-100: oklch(18% 0.02 210);
+  --color-base-200: oklch(22% 0.025 210);
+  --color-base-300: oklch(27% 0.03 210);
+  --color-base-content: oklch(92% 0.005 210);
+}
+
+// Font
+html {
+  font-family: 'DM Mono', 'Courier New', monospace;
+}
+
+// Smooth theme transitions
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.25s ease,
+    border-color     0.25s ease,
+    color            0.15s ease;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: oklch(var(--b2));
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(var(--p));
+  border-radius: 9999px;
+}

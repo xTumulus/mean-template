@@ -1,0 +1,4 @@
+Always trailing commas
+Single quotes for strings
+always end with ;
+use absolute references in imports
