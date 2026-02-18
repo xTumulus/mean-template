@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { Header } from './layout/header/header';
+import { Header } from './layout/header/app-header';
 
 @Component({
   selector: 'app-root',
   imports: [
+    Header,
     RouterLink,
     RouterOutlet
   ],
@@ -13,6 +14,6 @@ import { Header } from './layout/header/header';
 })
 
 export class App {
-  protected readonly title = signal('mean-template-ng');
+  protected readonly title = 'mean-template-ng';
   protected readonly version = '0.0.0';
 }
