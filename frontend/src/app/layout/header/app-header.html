@@ -1,0 +1,41 @@
+<header
+  class="header"
+  [class.header--hidden]="!isVisible()"
+  role="banner"
+  aria-label="Application header"
+>
+  <!-- Title + Version -->
+  <div class="header-brand">
+    <span class="header-title">{{ title() }}</span>
+    <span class="header-version" aria-label="Version {{ version() }}">
+      v{{ version() }}
+    </span>
+  </div>
+
+  <!-- divider (decorative) -->
+  <div class="header-rule" aria-hidden="true"></div>
+
+  <!-- Settings + Account -->
+  <div class="header-actions">
+    <!-- TODO Add settings button in future task -->
+    <!-- Settings button -->
+    <!-- <button
+      class="btn btn-sm btn-ghost btn-settings"
+      [class.btn-settings--active]="isSettingsOpen()"
+      (click)="handleSettingsClick()"
+      aria-label="Settings"
+      [attr.aria-pressed]="isSettingsOpen()"
+      <span class="material-symbols-outlined icon-settings" aria-hidden="true">settings</span>
+      <span class="btn-label">Settings</span>
+    </button>
+    > -->
+
+    <!-- Account section -->
+    <div class="account" aria-label="Logged in as {{ username() }}">
+      <div class="account-avatar" aria-hidden="true">
+        <span class="material-symbols-outlined account-icon">account_circle</span>
+      </div>
+      <span class="account-name">{{ username() }}</span>
+    </div>
+  </div>
+</header>
